@@ -7,11 +7,11 @@
   Menu menu;
 
   void setup() {
-    robo.configurar(false);
+    robo.configurar(true);
     Serial.begin(9600);
-  
+    robo.acionarServoGarra2(40);
     menu.menuLon();
-  
+    
     estrategia.setValoresCalibracao(menu.getValoresCalibracao());
   }
   void loop() {
