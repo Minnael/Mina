@@ -9,6 +9,7 @@
   void setup() {
     robo.configurar(true);
     Serial.begin(9600);
+    robo.acionarServoGarra1(60);
     robo.acionarServoGarra2(40);
     menu.menuLon();
     
