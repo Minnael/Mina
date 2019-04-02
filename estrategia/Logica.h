@@ -1,3 +1,14 @@
+#include <Adafruit_TCS34725.h>
+#include <cor.h>
+#include <CorHardware.h>
+#include <CorTcs23.h>
+#include <CorTcs34.h>
+#include <EEPROM2.h>
+#include <pinagem.h>
+#include <robo_hardware2.h>
+#include <SensoresCor.h>
+#include <Ultrasonic.h>
+
 #ifndef LOGICA_H
 #define LOGICA_H
 

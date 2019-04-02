@@ -4,6 +4,7 @@
 #include "Sensores.h"
 #include "Movimento.h"
 #include "Calibrador.h"
+#include "Sala3.h"
 
 class Estrategia{
 
@@ -15,7 +16,8 @@ class Estrategia{
    
     Sensores sensores;
     Movimento movimento;
-
+    Sala3 sala3;
+   
     float sensorLateralDir;
     float sensorLateralEsq;
     float sensorFrontal;
@@ -29,11 +31,11 @@ class Estrategia{
     void executa();
     void seguirLinha();
     void verde();
-    void sala3();
     void desviarObstaculo();
     void redutor();
     void voltarParaALinha();
     void rampa();
+    void Sala3();
     
     inline void setValoresCalibracao(Calibrador c){sensores.setValoresCalibracao(c);}
 
