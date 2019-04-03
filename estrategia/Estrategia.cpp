@@ -164,26 +164,10 @@ void Estrategia::Sala3() {
     robo.acionarMotores(-28, -24);
     delay(700);
 
+for(int i=0; i<5; i++){
     sala3.procurar();
-  
-    sala3.alinhar();
-    
-    sala3.procurar();
-
-    sala3.alinhar();
-    
-    sala3.procurar();
-
-    sala3.alinhar();
-
-    sala3.procurar();
-    
-    sala3.alinhar();
-
-    sala3.procurar();
-
-    movimento.parar();
-    while(1); 
+    sala3.alinhar(); 
+ }  
 }
 void Estrategia::desviarObstaculo() {
 
@@ -224,4 +208,3 @@ void Estrategia:: voltarParaALinha() {
   delay(550);
   parar = true;
 }
-

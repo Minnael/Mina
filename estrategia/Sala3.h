@@ -26,6 +26,7 @@ class Sala3 {
 	  void resgate();
 	  void procurar();
     void procurar2();
+    void resgate2();
     
 	  void led();
 	  void sonares();
