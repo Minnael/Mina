@@ -4,17 +4,17 @@
   void Movimento:: fren(){
     robo.acionarMotores(30,30);
   }
-  void Movimento:: dir(){
+  void Movimento:: esq(){
     robo.acionarMotores(45,-35);
   }
-  void Movimento:: esq(){
+  void Movimento:: dir(){
     robo.acionarMotores(-35,45);
   }
-  void Movimento:: exdir(){
-    robo.acionarMotores(30, -45);
-  }
   void Movimento:: exesq(){
-    robo.acionarMotores(-45, 30);
+    robo.acionarMotores(40, -30);
+  }
+  void Movimento:: exdir(){
+    robo.acionarMotores(-30, 40);
   }
   void Movimento:: parar(){
     robo.acionarMotores(0, 0);
@@ -28,10 +28,10 @@
   void Movimento:: superfrent(){
     robo.acionarMotores(60, 60);
   }
-  void Movimento:: dirr(){
+  void Movimento:: esqq(){
     robo.acionarMotores(60,-40);
   }
-  void Movimento:: esqq(){
+  void Movimento:: dirr(){
     robo.acionarMotores(-40,60);
   }
   void Movimento:: frenmed(){
