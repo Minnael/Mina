@@ -21,6 +21,8 @@ class Movimento{
     void frenmed();
     void rabdir();
     void re();
+    void exdir2();
+    void exesq2();
 
 //Movimento obstaculo
     void obFren();
