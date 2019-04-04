@@ -26,13 +26,13 @@
     robo.acionarMotores(-30, 30);
   }
   void Movimento:: superfrent(){
-    robo.acionarMotores(80, 80);
+    robo.acionarMotores(70, 70);
   }
   void Movimento:: esqq(){
-    robo.acionarMotores(70,60);
+    robo.acionarMotores(60,50);
   }
   void Movimento:: dirr(){
-    robo.acionarMotores(60,70);
+    robo.acionarMotores(50,60);
   }
   void Movimento:: frenmed(){
     robo.acionarMotores(40,40);

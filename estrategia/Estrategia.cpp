@@ -15,9 +15,9 @@ void Estrategia::executa() {
   else if (sensorFrontal < 5) {
     desviarObstaculo();
   }
-  //else if (valorSensorMaisEsq > 97) {
-  //redutor();
-  //}
+  else if (valorSensorMaisEsq > 97) {
+  redutor();
+  }
   else {
     seguirLinha();
   }
@@ -31,19 +31,19 @@ void Estrategia::redutor() {
     movimento.parar();
     delay(500);
 
-    robo.acionarMotores(30, 30);
-    delay(100);
-
     movimento.parar();
     delay(1000);
 
+    movimento.re();
+    delay(200);
+    
   if (!sensores.brancoBrancoBrancoBranco()){
     seguirLinha();
   }
   if (sensores.brancoBrancoBrancoBranco()){
     
     robo.acionarMotores(-30, 30);
-     delay(800);   
+     delay(700);   
   
   }
   if (!sensores.brancoBrancoBrancoBranco()){
@@ -60,46 +60,44 @@ void Estrategia::seguirLinha() {
 
   if (sensores.brancoBrancoBrancoBranco()) {
     movimento.fren();
-  }
+}
   else if (sensores.brancoPretoBrancoBranco()) {
     movimento.esq();
-  }
+}
   else if (sensores.brancoBrancoPretoBranco()) {
     movimento.dir();
-  }
+}
   else if (sensores.brancoBrancoBrancoPreto()) {
     movimento.exdir();
-  }
+}
   else if (sensores.pretoBrancoBrancoBranco()) {
     movimento.exesq();
-  }
+}
   else if (sensores.pretoPretoPretoPreto()) {
-    robo.ligarLed(1);
     movimento.re();
     delay(300);
-    
-  }
-
-  else if (sensores.brancoPretoPretoBranco()){
-    robo.ligarLed(3);
-    movimento.re();
-    delay(100);
-  }
-  
-  else if (sensores.brancoBrancoPretoBranco()) {
-    movimento.parar();
-    delay(200);
-    while (sensores.brancoBrancoBrancoBranco()){
-      movimento.exesq();
-    }
-    if (!sensores.brancoBrancoBrancoBranco()){
-      movimento.exesq();
-      delay(150);
-    }
 }
+  
+  else if (sensores.brancoPretoPretoBranco()){
+    movimento.re();
+    delay(300);
+}
+  
+  else if (sensores.brancoBrancoBrancoPreto()){ ///OBS
 
-
+    movimento.parar();
+    delay(200);
+    while (sensores.brancoBrancoBrancoBranco()){
+      movimento.exdir();
+    }
+    if (!sensores.brancoBrancoBrancoBranco()){
+      movimento.exdir();
+      delay(200);
+    }
+    
+}
   else if (sensores.brancoPretoPretoPreto())  {
+    
     movimento.parar();
     delay(200);
     while (sensores.brancoBrancoBrancoBranco()){
@@ -107,13 +105,14 @@ void Estrategia::seguirLinha() {
     }
     if (!sensores.brancoBrancoBrancoBranco()){
       movimento.exesq();
-      delay(150);
+      delay(200);
     }
 
 }
 
 
   else if (sensores.pretoPretoPretoBranco())  {
+    
     movimento.parar();
     delay(200);
     while (sensores.brancoBrancoBrancoBranco()){
@@ -121,25 +120,13 @@ void Estrategia::seguirLinha() {
     }
     if (!sensores.brancoBrancoBrancoBranco()){
       movimento.exdir();
-      delay(150);
-    }
-}
-
-
-  else if (sensores.brancoPretoBrancoBranco())  {
-    movimento.parar();
-    delay(200);
-    while (sensores.brancoBrancoBrancoBranco()){
-      movimento.exesq();
-    }
-    if (!sensores.brancoBrancoBrancoBranco()){
-      movimento.exesq();
-      delay(150);
+      delay(200);
     }
 }
 
 
   else if (sensores.pretoPretoBrancoBranco())  {
+    
      movimento.parar();
      delay(200);
      while (sensores.brancoBrancoBrancoBranco()){
@@ -147,12 +134,13 @@ void Estrategia::seguirLinha() {
     }
     if (!sensores.brancoBrancoBrancoBranco()){
       movimento.exesq();
-      delay(150);
+      delay(200);
     }
 }
 
 
   else if (sensores.brancoBrancoPretoPreto())  {
+    
     movimento.parar();
      delay(200);
     while (sensores.brancoBrancoBrancoBranco()){
@@ -160,7 +148,7 @@ void Estrategia::seguirLinha() {
     }
     if (!sensores.brancoBrancoBrancoBranco()){
       movimento.exdir();
-      delay(150);
+      delay(200);
     }
   }
 
@@ -193,21 +181,21 @@ void Estrategia::rampa() {
     }
     else if (sensores.pretoPretoPretoBranco()) {
       movimento.superfrent();
-      delay(200);
+      delay(500);
       movimento.parar();
       delay(500);
        Sala3();       
     }
     else if (sensores.brancoPretoPretoPreto()) {
       movimento.superfrent();
-      delay(200);
+      delay(500);
       movimento.parar();
       delay(500);
        Sala3(); 
     }
     else if (sensores.pretoPretoPretoPreto()) {
       movimento.superfrent();
-      delay(200);
+      delay(500);
       movimento.parar();
       delay(500); 
       Sala3(); 
@@ -220,7 +208,7 @@ void Estrategia::Sala3() {
     delay(2000);
 
     movimento.fren();
-    delay(600);
+    delay(800);
     movimento.re();
     delay(400);
     movimento.girando();
