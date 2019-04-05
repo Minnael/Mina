@@ -36,6 +36,7 @@ class Estrategia{
     void voltarParaALinha();
     void rampa();
     void Sala3();
+    void led();
     
     inline void setValoresCalibracao(Calibrador c){sensores.setValoresCalibracao(c);}
 
