@@ -276,9 +276,34 @@ void Estrategia::desviarObstaculo() {
   delay(500);
   movimento.rodaEsqMais();
   delay(1050);
-  
-  movimento.parar();
-  while(1);
+  robo.ligarLed(1);
+
+  movimento.frenmed();
+  delay(550);
+  movimento.rodaEsqMais();
+  delay(1050);
+  robo.ligarLed(2);
+
+  movimento.frenmed();
+  delay(600);
+  movimento.rodaEsqMenos();
+  delay(1050);
+
+  movimento.re();
+  delay(100);
+
+  for (int obs2 = 0; obs2 < 3; obs2++){
+   movimento.parar();
+   delay(300);
+   robo.desligarTodosLeds();
+   delay(200);
+   robo.ligarTodosLeds();
+   robo.desligarLed(1);
+   delay(100);
+   robo.desligarLed(2);
+   delay(100);
+   robo.desligarLed(3); 
+}
 
   seguirLinha();
 }
