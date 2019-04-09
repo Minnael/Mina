@@ -17,25 +17,15 @@ class Movimento{
     void superfrent();
     void dirr();
     void esqq();
-    void rabesq();
     void frenmed();
-    void rabdir();
     void re();
+    void exdir2();
+    void exesq2();
+    void rodaEsqMenos();
+    void rodaDirMenos();
+    void rodaEsqMais();
+    void rodaDirMais();
 
-//Movimento obstaculo
-    void obFren();
-    void obDir();
-    void obEsq();
-    void obFrenLen();
-    void obRe();
-    void obReLen();
-
-//Movimento sala3
-
-	void frenS3();
-	void dirS3();
-	void esqS3();
-	void reS3();
 };
 
 #endif

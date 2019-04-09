@@ -9,8 +9,8 @@
   void setup() {
     robo.configurar(true);
     Serial.begin(9600);
-    robo.acionarServoGarra1(90);
-    robo.acionarServoGarra2(0);
+    robo.acionarServoGarra1(40);
+    robo.acionarServoGarra2(70);
     menu.menuLon();
     
     estrategia.setValoresCalibracao(menu.getValoresCalibracao());

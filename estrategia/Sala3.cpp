@@ -17,28 +17,28 @@ void Sala3::rampa (){
       movimento.dirr();
     }
     else if (sensores.brancoBrancoBrancoPreto()) {
-      movimento.exesq();
+      movimento.exdir();
     }
     else if (sensores.pretoBrancoBrancoBranco()) {
-      movimento.exdir();
+      movimento.exesq();
     }
     else if (sensores.pretoPretoPretoBranco()) {
       movimento.superfrent();
-      delay(800);
+      delay(600);
       movimento.parar();
       delay(500);
       alinhar();      
     }
     else if (sensores.brancoPretoPretoPreto()) {
       movimento.superfrent();
-      delay(800);
+      delay(600);
       movimento.parar();
       delay(700);
       alinhar(); 
     }
     else if (sensores.pretoPretoPretoPreto()) {
       movimento.superfrent();
-      delay(800);
+      delay(600);
       movimento.parar();
       delay(500); 
       alinhar();    
@@ -47,55 +47,69 @@ void Sala3::rampa (){
 }
 void Sala3::procurar(){
 
+
   sensorLateralDir = robo.lerSensorSonarDir();
   sensorLateralEsq = robo.lerSensorSonarEsq();
   sensorFrontal = robo.lerSensorSonarFrontal();
   
-    robo.acionarServoGarra2(60);
-    robo.acionarServoGarra1(180);
+    robo.acionarServoGarra2(120);
+    robo.acionarServoGarra1(170);
     
     movimento.parar();
     delay(2000);
 
-    robo.acionarMotores(34, 28);
-    delay(2400);
+    movimento.re();
+    delay(500);
+
+    movimento.fren();
+    delay(200);
+
+    robo.acionarMotores(-45, -45);
+    delay(400);
+
+    robo.acionarMotores(54, 50);
+    delay(1400);
 
     robo.acionarServoGarra2(0);
     
     movimento.parar();
     delay(1000);
     
-    robo.acionarMotores(-38, -34);
-    delay(2400);
+    robo.acionarMotores(-54, -47);
+    delay(1400);
     
     movimento.parar();
     delay(200);
     
-    robo.acionarMotores(28, 23);
-    delay(400);
+    robo.acionarMotores(52, 50);
+    delay(200);
 
     movimento.parar();
     delay(500);
-    robo.acionarServoGarra2(10);
-    delay(500);
-    robo.acionarServoGarra2(5);
-    delay(500);
-    movimento.parar();
-    delay(500);
     robo.acionarServoGarra2(20);
+    delay(500);
     movimento.parar();
     delay(500);
     robo.acionarServoGarra2(40);
     movimento.parar();
     delay(500);
-    robo.acionarServoGarra2(50);
+    robo.acionarServoGarra2(60);
     movimento.parar();
     delay(500);
-    robo.acionarServoGarra2(60);
+    robo.acionarServoGarra2(80);
+    movimento.parar();
+    delay(500);
+    robo.acionarServoGarra2(100);
+    movimento.parar();
+    delay(500);
+    robo.acionarServoGarra2(120);
     movimento.parar();
     delay(500);
     
     movimento.re();
+    delay(300);
+
+    robo.acionarMotores(-45, -45);
     delay(300);
 
     robo.acionarServoGarra1(40);
@@ -123,42 +137,11 @@ void Sala3::procurar(){
 void Sala3::alinhar(){
 
     robo.acionarMotores(38, 34);
-    delay(800);
+    delay(400);
 
     movimento.parar();
     delay(1000);
     
-    sensorLateralEsq = robo.lerSensorSonarEsq();
-    if  (sensorLateralEsq < 10){
-      
-      robo.ligarTodosLeds();
-      robo.acionarMotores(-30, 0);
-      delay(1000);
-      robo.acionarMotores(0, -30);
-      delay(1000);
-      movimento.re();
-      delay(800); 
-      movimento.fren();
-      delay(200);
-      robo.acionarMotores(-40, -40);
-      delay(300); 
-      robo.desligarTodosLeds();    
-           
-      sensorLateralEsq = robo.lerSensorSonarEsq();
-      procurar();
-    }
-    
-    sensorLateralEsq = robo.lerSensorSonarEsq();
-     if (sensorLateralEsq > 10){
-      movimento.re();
-      delay(800);
-
-      movimento.parar();
-      delay(500);
-
-      sensorLateralEsq = robo.lerSensorSonarEsq();
-      procurar();
-    }
     movimento.fren();
     delay(600);
     robo.acionarMotores(30, -30);
@@ -168,7 +151,7 @@ void Sala3::alinhar(){
     movimento.parar();
     delay(500);
     movimento.girando();
-    delay(700);
+    delay(800);
     robo.acionarMotores(-40, -40);
     delay(600);
     movimento.parar();
@@ -205,19 +188,19 @@ void Sala3::resgate(){
   }
   
   sensorFrontal = robo.lerSensorSonarFrontal();
-  while(sensorFrontal > 10){
+  while(sensorFrontal > 18){
     sensorFrontal = robo.lerSensorSonarFrontal();
     robo.acionarMotores(38, 34);
   }
 
   sensorFrontal = robo.lerSensorSonarFrontal();
-  if (sensorFrontal < 10){
+  if (sensorFrontal < 18){
     sensorFrontal = robo.lerSensorSonarFrontal();
     movimento.re();
     delay(300);
   }
   sensorFrontal = robo.lerSensorSonarFrontal();
-  if (sensorFrontal > 10 && sensorFrontal < 15){
+  if (sensorFrontal >= 18 && sensorFrontal < 20){
     sensorFrontal = robo.lerSensorSonarFrontal();
     movimento.fren();
     delay(300);
@@ -235,29 +218,26 @@ void Sala3::resgate(){
   movimento.fren();
   delay(300);
 
-  movimento.re();
+  robo.acionarMotores(-40, -40);
   delay(400);
+
+  robo.acionarMotores(-45, -45);
+  delay(400);
+  
 
   movimento.parar();
   delay(1000);
 
-  sensorFrontal = robo.lerSensorSonarFrontal();
-  while (sensorFrontal > 15){
-  sensorFrontal = robo.lerSensorSonarFrontal();
-  robo.acionarMotores(38, 34);
-  sensorFrontal = robo.lerSensorSonarFrontal();
- }
-
-  movimento.fren();
-  delay(500);
+  robo.acionarMotores(50, 49);
+  delay(1300);
   
-  robo.acionarMotores(-30, 0);
-  delay(400);
+  robo.acionarMotores(-40, 0);
+  delay(300);
   
   sensorFrontal = robo.lerSensorSonarFrontal();
   
   movimento.fren();
-  delay(1400);
+  delay(1600);
     
   movimento.parar();
   delay(2000);
@@ -267,7 +247,7 @@ void Sala3::resgate(){
   delay(1000);
   robo.acionarServoGarra2(10);
   delay(100);
-  robo.acionarServoGarra2(40);
+  robo.acionarServoGarra2(120);
   delay(1000);
 
   movimento.parar();
