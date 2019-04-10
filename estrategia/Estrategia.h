@@ -22,7 +22,10 @@ class Estrategia{
     float sensorLateralEsq;
     float sensorFrontal;
 
+    float valorSensorEsq;
+    float valorSensorDir;
     float valorSensorMaisEsq;
+    float valorSensorMaisDir;
     
     bool parar;
 
@@ -30,7 +33,8 @@ class Estrategia{
 
     void executa();
     void seguirLinha();
-    void verde();
+    void verde1();
+    void verde2();
     void desviarObstaculo();
     void redutor();
     void voltarParaALinha();
