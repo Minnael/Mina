@@ -20,6 +20,7 @@ class Menu{
         float refletanciaMaisDir;
         float refletanciaEsq;
         float refletanciaMaisEsq;
+        float refletanciaMeio;
 
 
   public:

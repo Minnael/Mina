@@ -7,36 +7,36 @@ void Sala3::rampa (){
 
   while (!parar) {
 
-    if (sensores.brancoBrancoBrancoBranco()) {
+    if (sensores.BBBB()) {
       movimento.superfrent();
     }
-    else if (sensores.brancoPretoBrancoBranco()) {
+    else if (sensores.BPBB()) {
       movimento.esqq();
     }
-    else if (sensores.brancoBrancoPretoBranco()) {
+    else if (sensores.BBPB()) {
       movimento.dirr();
     }
-    else if (sensores.brancoBrancoBrancoPreto()) {
+    else if (sensores.BBBP()) {
       movimento.exdir();
     }
-    else if (sensores.pretoBrancoBrancoBranco()) {
+    else if (sensores.PBBB()) {
       movimento.exesq();
     }
-    else if (sensores.pretoPretoPretoBranco()) {
+    else if (sensores.PPPB()) {
       movimento.superfrent();
       delay(600);
       movimento.parar();
       delay(500);
       alinhar();      
     }
-    else if (sensores.brancoPretoPretoPreto()) {
+    else if (sensores.BPPP()) {
       movimento.superfrent();
       delay(600);
       movimento.parar();
       delay(700);
       alinhar(); 
     }
-    else if (sensores.pretoPretoPretoPreto()) {
+    else if (sensores.PPPP()) {
       movimento.superfrent();
       delay(600);
       movimento.parar();

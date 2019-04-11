@@ -12,33 +12,37 @@ class Sensores{
 
   public:
 
-    bool brancoBrancoBrancoBranco();
+    bool MB();
+    
+    bool BBBB();
 
-    bool brancoBrancoBrancoPreto();
+    bool BBBBB();
+    
+    bool BBBP();
 
-    bool brancoBrancoPretoBranco();
+    bool BBPB();
 
-    bool brancoBrancoPretoPreto();
+    bool BBPP();
 
-    bool brancoPretoBrancoBranco();
+    bool BPBB();
 
-    bool brancoPretoPretoBranco();
+    bool BPPB();
 
-    bool pretoBrancoBrancoBranco();
+    bool PBBB();
 
-    bool pretoPretoPretoPreto();
+    bool PPPP();
 
-    bool pretoPretoPretoBranco();
+    bool PPPB();
 
-    bool brancoPretoPretoPreto();
+    bool BPPP();
 
-    bool pretoPretoBrancoBranco();
+    bool PPBB();
 
-    bool brancoPretoBrancoPreto();
+    bool BPBP();
 
     bool brancoMesq();
 
-    bool pretoPretoPreto();
+    bool PPP();
 
     bool brancoMdir();
 
@@ -46,7 +50,7 @@ class Sensores{
 
     bool pretoMdir();
 
-    bool brancoBrancoBranco();
+    bool BBB();
 
     bool brancoEsq();
 

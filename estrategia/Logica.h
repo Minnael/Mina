@@ -22,10 +22,12 @@ class Logica{
     float sRE;
     float sRD;
     float sRMD;
+    float sM;
     float valorMaisEsq;
     float valorEsq;
     float valorDir;
     float valorMaisDir;
+    float valorMeio;
 
   public:
 
@@ -42,6 +44,9 @@ class Logica{
     
     bool bValorMaisDir();
     bool pValorMaisDir();
+    
+    bool pValorMeio();
+    bool bValorMeio(); 
 
     void valores();
     
@@ -49,6 +54,8 @@ class Logica{
     void atualizarVE();
     void atualizarVD();
     void atualizarVMD();
+
+    void atualizarMeio();
 
     void setValoresCalibracao(Calibrador c);
 
