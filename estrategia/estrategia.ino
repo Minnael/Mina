@@ -11,8 +11,7 @@
     Serial.begin(9600);
     robo.acionarServoGarra1(60);
     robo.acionarServoGarra2(50);
-    menu.menuLon();
-    
+    menu.menuLon(); 
     estrategia.setValoresCalibracao(menu.getValoresCalibracao());
   }
   void loop() {
