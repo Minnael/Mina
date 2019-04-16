@@ -18,6 +18,8 @@
       val.refletanciaDir=calibrador.getSRD();
       val.refletanciaMaisDir=calibrador.getSRMD();
       
+      val.refletanciaMeio = calibrador.getsM();
+      
       robo.salvarCalibracao(val);
       } 
       else if(robo.botao2Pressionado()){
@@ -26,6 +28,9 @@
         calibrador.setSRE(val.refletanciaEsq);
         calibrador.setSRD(val.refletanciaDir);
         calibrador.setSRMD( val.refletanciaMaisDir);
+        
+        calibrador.setsM (val.refletanciaMeio);
+        
         robo.desligarLed(1);
         pare = true;
       }
@@ -44,4 +49,3 @@
     Serial.println("Mais Direito: ");
     Serial.println(calibrador.getSRMD());
   }
-

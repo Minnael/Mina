@@ -12,46 +12,30 @@ class Sensores{
 
   public:
 
-    bool brancoBrancoBrancoBranco();
-
-    bool brancoBrancoBrancoPreto();
-
-    bool brancoBrancoPretoBranco();
-
-    bool brancoBrancoPretoPreto();
-
-    bool brancoPretoBrancoBranco();
-
-    bool brancoPretoPretoBranco();
-
-    bool pretoBrancoBrancoBranco();
-
-    bool pretoPretoPretoPreto();
-
-    bool pretoPretoPretoBranco();
-
-    bool brancoPretoPretoPreto();
-
-    bool pretoPretoBrancoBranco();
-
-    bool brancoPretoBrancoPreto();
-
+    bool MB();
+    bool PB();
+    
+    bool BBBB();
+    bool BBBBB();
+    bool BBBP();
+    bool BBPB();
+    bool BBPP();
+    bool BPBB();
+    bool BPPB();
+    bool PBBB();
+    bool PPPP();
+    bool PPPB();
+    bool BPPP();
+    bool PPBB();
+    bool BPBP();
     bool brancoMesq();
-
-    bool pretoPretoPreto();
-
+    bool PPP();
     bool brancoMdir();
-
     bool brancoDir();
-
     bool pretoMdir();
-
-    bool brancoBrancoBranco();
-
+    bool BBB();
     bool brancoEsq();
-
 		bool entSala3();
-
     bool superBrancoME();
 
     inline void setValoresCalibracao(Calibrador c){logica.setValoresCalibracao(c);}

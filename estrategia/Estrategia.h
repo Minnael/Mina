@@ -26,6 +26,7 @@ class Estrategia{
     float valorSensorDir;
     float valorSensorMaisEsq;
     float valorSensorMaisDir;
+    float meio;
     
     bool parar;
 

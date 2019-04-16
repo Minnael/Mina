@@ -1,117 +1,126 @@
 #include "robo_hardware2.h"
 #include "Sensores.h"
 
+  bool Sensores::BBBBB(){
+    
+    return (logica.bValorMaisEsq() && logica.bValorEsq()&& logica.bValorMeio() && logica.bValorDir() && logica.bValorMaisDir());
+}
+  bool Sensores:: MB(){
+    
+    return (logica.bValorMeio());
+}
+  bool Sensores:: PB(){
 
-  bool Sensores:: brancoBrancoBrancoBranco() {
+    return (logica.pValorMeio());
+}
+  bool Sensores:: BBBB() {
 
     return (logica.bValorMaisEsq() && logica.bValorEsq() && logica.bValorDir() && logica.bValorMaisDir());
-  }
+}
 
-  bool Sensores:: brancoBrancoBrancoPreto() {
+  bool Sensores:: BBBP() {
 
     return (logica.bValorMaisEsq() && logica.bValorEsq() && logica.bValorDir() && logica.pValorMaisDir());
 
-  }
+}
 
-  bool Sensores:: brancoBrancoPretoBranco() {
+  bool Sensores:: BBPB() {
 
     return (logica.bValorMaisEsq() && logica.bValorEsq() && logica.pValorDir() && logica.bValorMaisDir());
 
-  }
+}
 
-  bool Sensores:: brancoBrancoPretoPreto() {
+  bool Sensores:: BBPP() {
 
     return (logica.bValorMaisEsq() && logica.bValorEsq() && logica.pValorDir() && logica.pValorMaisDir());
 
-  }
+}
 
-  bool Sensores:: brancoPretoBrancoBranco() {
+  bool Sensores:: BPBB() {
 
     return (logica.bValorMaisEsq() && logica.pValorEsq() && logica.bValorDir() && logica.bValorMaisDir());
 
-  }
+}
 
-  bool Sensores:: brancoPretoPretoBranco() {
+  bool Sensores:: BPPB() {
 
     return (logica.bValorMaisDir() && logica.pValorEsq() && logica.pValorDir() && logica.bValorMaisDir());
 
-  }
-
-  bool Sensores:: pretoBrancoBrancoBranco() {
+}
+  
+  bool Sensores:: PBBB() {
 
     return (logica.pValorMaisEsq() && logica.bValorEsq() && logica.bValorDir() && logica.bValorMaisDir());
 
-  }
+}
 
-  bool Sensores:: pretoPretoPretoPreto() {
+  bool Sensores:: PPPP() {
 
     return (logica.pValorMaisEsq() && logica.pValorEsq() && logica.pValorDir() && logica.pValorMaisDir());
 
-  }
-  bool Sensores:: pretoPretoPretoBranco() {
+}
+  bool Sensores:: PPPB() {
 
     return (logica.pValorMaisEsq() && logica.pValorEsq() && logica.pValorDir() && logica.bValorMaisDir());
 
-  } 
-  bool Sensores:: brancoPretoPretoPreto() {
+} 
+  bool Sensores:: BPPP() {
 
     return (logica.bValorMaisEsq() && logica.pValorEsq() && logica.pValorDir() && logica.pValorMaisDir());
 
-  } 
-  bool Sensores:: pretoPretoBrancoBranco() {
+} 
+  bool Sensores:: PPBB() {
 
     return (logica.pValorMaisEsq() && logica.pValorEsq() && logica.bValorDir() && logica.bValorMaisDir());
 
-  }
+}
   bool Sensores:: brancoMesq (){
 
     return (logica.bValorMaisEsq());
-  }
+}
 
-   bool Sensores::  superBrancoME(){
+   bool Sensores:: superBrancoME(){
 
     return (logica.superBrancoME());
-  }
+}
   
   
   bool Sensores:: brancoMdir (){
 
     return (logica.bValorMaisDir());
-  }
+}
   
   bool Sensores:: brancoDir (){
 
     return (logica.bValorDir());
-  }
+}
   
   bool Sensores:: brancoEsq (){
 
     return (logica.bValorEsq()); 
-  }
+}
 
   bool Sensores:: pretoMdir (){
 
     return (logica.pValorMaisDir());
-  }
+}
 
-  bool Sensores:: brancoBrancoBranco (){
+  bool Sensores:: BBB (){
 
     return (logica.bValorDir() && logica.bValorEsq() && logica.bValorMaisDir());
-  }
+}
 
-  bool Sensores:: pretoPretoPreto (){
+  bool Sensores:: PPP (){
 
     return (logica.pValorDir() && logica.pValorEsq() && logica.pValorMaisDir());
     
-  }
-  bool Sensores:: brancoPretoBrancoPreto() {
+}
+  bool Sensores:: BPBP() {
 
     return (logica.bValorMaisEsq() && logica.pValorEsq() && logica.bValorDir() && logica.pValorMaisDir());
 
-  }
+}
 	bool Sensores:: entSala3(){
 		
-		return ((pretoPretoPretoPreto()) || (brancoPretoPretoPreto()) || (pretoPretoPretoBranco()));
-
-	}
-
+		return ((PPPP()) || (BPPP()) || (PPPB()));
+}

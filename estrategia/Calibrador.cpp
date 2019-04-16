@@ -1,32 +1,39 @@
 #include "Calibrador.h"
 #include "robo_hardware2.h"
 
-  float Calibrador:: getSRME() {
+  float Calibrador:: getsM(){ //MEIO
+    return sM;
+}
+  
+  float Calibrador:: getSRME() { //MAIS-ESQUERDO
     return sRME;
-  }
-  float Calibrador:: getSRE() {
+}
+  float Calibrador:: getSRE() { //ESQUERDO
     return sRE;
-  }
-  float Calibrador:: getSRD() {
+}
+  float Calibrador:: getSRD() { //DIREITO
     return sRD;
-  }
-  float Calibrador:: getSRMD() {
+}
+  float Calibrador:: getSRMD() { //MAIS-DIREITO
     return sRME;
-  }
+}
+  void Calibrador::setsM(float sM2){
+    sM = sM2;
+}
   void Calibrador::setSRME(float sRME2){
     sRME = sRME2;
-  }
+}
   void Calibrador::setSRE(float sRE2){
     sRE = sRE2;
-  }
+}
 
   void Calibrador::setSRD(float sRD2){
     sRD = sRD2;
-  }
+}
 
   void Calibrador::setSRMD(float sRMD2){
     sRMD = sRMD2;
-  }
+}
 
 
   void Calibrador:: calibrar() {    
@@ -48,11 +55,13 @@
       v2 = robo.lerSensorLinhaEsq();
       v3 = robo.lerSensorLinhaDir();
       v4 = robo.lerSensorLinhaMaisDir();
+      v5 = robo.lerSensorLinhaMeio();
 
       s1 = (v1 + s1);
       s2 = (v2 + s2);
       s3 = (v3 + s3);
       s4 = (v4 + s4);
+      s5 = (v5 + s5);
 
       Serial.println("BRANCO PRONTO!");
       robo.ligarLed(2);
@@ -65,12 +74,13 @@
       v2 = robo.lerSensorLinhaEsq();
       v3 = robo.lerSensorLinhaDir();
       v4 = robo.lerSensorLinhaMaisDir();
-
+      v5 = robo.lerSensorLinhaMeio();
 
       s1 = (v1 + s1);
       s2 = (v2 + s2);
       s3 = (v3 + s3);
       s4 = (v4 + s4);
+      s5 = (v5 + s5);
 
     Serial.println("PRETO PRONTO!!");
     robo.ligarLed(3);
@@ -107,5 +117,6 @@
     sRE = s2 / (contador*2);
     sRD = s3 / (contador*2);
     sRMD = s4/ (contador*2);
+    sM = s5/ (contador*2);
 
   }
